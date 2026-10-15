@@ -1,4 +1,4 @@
-# Papelería Fundadores — Backend API REST
+# Pape Market — Backend API REST
 
 ![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.2-brightgreen?logo=springboot)
@@ -7,7 +7,7 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
 ![License](https://img.shields.io/badge/License-<!-- LICENSE_PLACEHOLDER -->-blue)
 
-API REST para el sistema integral de gestión y comercio electrónico de **Papelería Fundadores**. Centraliza todas las operaciones del negocio: control de inventario en tiempo real, registro de ventas y compras a proveedores, gestión de clientes y pedidos online, y autenticación segura basada en JWT con control de acceso por roles (RBAC).
+API REST para el sistema integral de gestión y comercio electrónico. Centraliza todas las operaciones del negocio: control de inventario en tiempo real, registro de ventas y compras a proveedores, gestión de clientes y pedidos online, y autenticación segura basada en JWT con control de acceso por roles (RBAC).
 
 ---
 
