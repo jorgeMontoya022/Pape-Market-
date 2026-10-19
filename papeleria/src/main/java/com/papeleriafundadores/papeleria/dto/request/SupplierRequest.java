@@ -1,16 +1,19 @@
 package com.papeleriafundadores.papeleria.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public record SupplierRequest(
+        @JsonAlias("name")
         @NotBlank(message = "El nombre de la empresa es obligatorio")
         String companyName,
 
         @NotBlank(message = "El NIT es obligatorio")
         String nit,
 
+        @JsonAlias({"contactPerson", "contact_person"})
         @Size(max = 150, message = "El representante legal no puede superar los 150 caracteres")
         String legalRepresentative,
 
