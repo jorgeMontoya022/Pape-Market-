@@ -513,9 +513,6 @@ build/reports/tests/test/index.html
 
 > Este proyecto  incluye `Dockerfile`.
 
-
-```
-
 ---
 
 ## Contribución
@@ -541,6 +538,6 @@ MIT License — consulta el archivo `LICENSE` para más detalles.
 - GitHub: [@jorgeMontoya022](https://github.com/jorgeMontoya022)
 
 **Sebastián Torres Morales**
-- Colaborador del proyecto
+- GitHub: [@Sebas_GTorres](https://github.com/Sebas_GTorres)
 
 - Repositorio: [Pape-Market-](https://github.com/jorgeMontoya022/Pape-Market-)
