@@ -5,9 +5,9 @@
 ![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql)
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
-![License](https://img.shields.io/badge/License-<!-- LICENSE_PLACEHOLDER -->-blue)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-API REST para el sistema integral de gestión y comercio electrónico. Centraliza todas las operaciones del negocio: control de inventario en tiempo real, registro de ventas y compras a proveedores, gestión de clientes y pedidos online, y autenticación segura basada en JWT con control de acceso por roles (RBAC).
+API REST para el sistema integral de gestión y comercio electrónico de **Pape Market**. Centraliza todas las operaciones del negocio: control de inventario en tiempo real, registro de ventas y compras a proveedores, gestión de clientes y pedidos online, y autenticación segura basada en JWT con control de acceso por roles (RBAC).
 
 ---
 
@@ -25,7 +25,7 @@ API REST para el sistema integral de gestión y comercio electrónico. Centraliz
 - [Docker](#docker)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
-- [Autor](#autor)
+- [Autores](#autores)
 
 ---
 
@@ -81,8 +81,8 @@ API REST para el sistema integral de gestión y comercio electrónico. Centraliz
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/jorgeMontoya022/papeleria-backend.git
-cd papeleria-backend/papeleria
+git clone https://github.com/jorgeMontoya022/Pape-Market-.git
+cd Pape-Market-/papeleria
 ```
 
 ### 2. Configurar las variables de entorno
@@ -188,7 +188,7 @@ JWT_SECRET=tu_secreto_hexadecimal_de_64_caracteres
 JWT_EXPIRATION_MS=86400000
 
 # --- URLS ---
-RESET_PASSWORD_URL=http://localhost:8080/api/v1/auth/reset-password
+RESET_PASSWORD_URL=http://localhost:4200/reset-password
 ```
 
 ### Propiedades de `application.properties`
@@ -196,13 +196,13 @@ RESET_PASSWORD_URL=http://localhost:8080/api/v1/auth/reset-password
 | Propiedad | Variable de entorno | Valor por defecto | Descripción |
 |---|---|---|---|
 | `spring.datasource.url` | — | `jdbc:postgresql://localhost:5432/papeleria_db` | URL de conexión |
-| `spring.datasource.username` | `DB_USERNAME` | `postgres` | Usuario de BD |
+| `spring.datasource.username` | `DB_USERNAME` | — | Usuario de BD |
 | `spring.datasource.password` | `DB_PASSWORD` | — | Contraseña de BD |
 | `spring.mail.username` | `MAIL_USERNAME` | — | Cuenta Gmail |
 | `spring.mail.password` | `MAIL_PASSWORD` | — | App password de Gmail |
 | `jwt.secret` | `JWT_SECRET` | — | Clave HMAC-SHA256 (min. 32 bytes) |
 | `jwt.expiration-ms` | `JWT_EXPIRATION_MS` | `86400000` (24 h) | Validez del token |
-| `app.reset-password-url` | `RESET_PASSWORD_URL` | `http://localhost:8080/...` | URL en emails de recuperación |
+| `app.reset-password-url` | `RESET_PASSWORD_URL` | `http://localhost:4200/reset-password` | URL en emails de recuperación |
 | `spring.jpa.hibernate.ddl-auto` | — | `update` | Estrategia de esquema |
 
 ### Perfiles
@@ -224,7 +224,8 @@ papeleria/
     │   │   ├── PapeleriaApplication.java       # Clase principal Spring Boot
     │   │   │
     │   │   ├── config/                         # Configuración de Spring Security
-    │   │   │   └── SecurityConfig.java         # Filtros, RBAC, sesión stateless
+    │   │   │   ├── SecurityConfig.java         # Filtros, RBAC, sesión stateless
+    │   │   │   └── CorsConfig.java             # CORS para localhost:4200
     │   │   │
     │   │   ├── controller/                     # Capa de presentación (REST)
     │   │   │   ├── AuthController.java         # /api/v1/auth/**
@@ -351,6 +352,7 @@ papeleria/
 | `GET` | `/api/v1/customers` | `ADMIN`, `EMPLEADO` | Listar clientes |
 | `GET` | `/api/v1/customers/{id}` | `ADMIN`, `EMPLEADO` | Buscar por ID |
 | `GET` | `/api/v1/customers/document/{doc}` | `ADMIN`, `EMPLEADO` | Buscar por documento |
+| `GET` | `/api/v1/customers/user/{userId}` | Cualquier autenticado | Buscar Customer por userId |
 | `POST` | `/api/v1/customers` | `ADMIN`, `EMPLEADO` | Registrar cliente |
 | `PUT` | `/api/v1/customers/{id}` | `ADMIN`, `EMPLEADO` | Editar cliente |
 | `PATCH` | `/api/v1/customers/{id}/status` | `ADMIN` | Cambiar estado |
@@ -524,7 +526,7 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 ## Contribución
 
-Este es un proyecto personal de práctica. Si deseas sugerir mejoras:
+Este es un proyecto académico universitario. Si deseas sugerir mejoras:
 
 1. Haz un fork del repositorio.
 2. Crea una rama: `git checkout -b feature/mi-mejora`
@@ -535,16 +537,16 @@ Este es un proyecto personal de práctica. Si deseas sugerir mejoras:
 
 ## Licencia
 
-<!-- LICENSE_PLACEHOLDER: Agrega aquí tu licencia. Ejemplo: MIT, Apache 2.0, etc. -->
-
-Este proyecto no incluye un archivo de licencia explícito en el repositorio.
+MIT License — consulta el archivo `LICENSE` para más detalles.
 
 ---
 
-## Autor
+## Autores
 
 **Jorge William Montoya Toro**
 - GitHub: [@jorgeMontoya022](https://github.com/jorgeMontoya022)
-- Repositorio: [papeleria-backend](https://github.com/jorgeMontoya022/papeleria-backend)
 
-<!-- CONTACT_PLACEHOLDER: Agrega correo u otros medios de contacto si lo deseas -->
+**Sebastián Torres Morales**
+- Colaborador del proyecto
+
+- Repositorio: [Pape-Market-](https://github.com/jorgeMontoya022/Pape-Market-)
