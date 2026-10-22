@@ -511,7 +511,7 @@ build/reports/tests/test/index.html
 
 ## Docker
 
-> Este proyecto no incluye `Dockerfile` ni `docker-compose.yml`. Para ejecutarlo necesitas instalar Java 21 y PostgreSQL directamente en tu máquina o servidor.
+> Este proyecto  incluye `Dockerfile`.
 
 Si deseas contenedorizarlo en el futuro, el punto de entrada sería:
 
