@@ -513,13 +513,7 @@ build/reports/tests/test/index.html
 
 > Este proyecto  incluye `Dockerfile`.
 
-Si deseas contenedorizarlo en el futuro, el punto de entrada sería:
 
-```dockerfile
-# Ejemplo básico (no incluido en el repositorio)
-FROM eclipse-temurin:21-jre
-COPY build/libs/papeleria-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
 ```
 
 ---
