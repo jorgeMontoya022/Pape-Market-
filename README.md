@@ -511,16 +511,7 @@ build/reports/tests/test/index.html
 
 ## Docker
 
-> Este proyecto no incluye `Dockerfile` ni `docker-compose.yml`. Para ejecutarlo necesitas instalar Java 21 y PostgreSQL directamente en tu máquina o servidor.
-
-Si deseas contenedorizarlo en el futuro, el punto de entrada sería:
-
-```dockerfile
-# Ejemplo básico (no incluido en el repositorio)
-FROM eclipse-temurin:21-jre
-COPY build/libs/papeleria-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
-```
+> Este proyecto  incluye `Dockerfile`.
 
 ---
 
@@ -547,6 +538,6 @@ MIT License — consulta el archivo `LICENSE` para más detalles.
 - GitHub: [@jorgeMontoya022](https://github.com/jorgeMontoya022)
 
 **Sebastián Torres Morales**
-- Colaborador del proyecto
+- GitHub: [@Sebas_GTorres](https://github.com/Sebas_GTorres)
 
 - Repositorio: [Pape-Market-](https://github.com/jorgeMontoya022/Pape-Market-)
